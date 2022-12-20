@@ -239,7 +239,7 @@ If you use ORB-SLAM3 in an academic work, please cite:
 We have tested the library in **Ubuntu 16.04** and **18.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
 
 ## C++11 or C++0x Compiler
-We use the new thread and chrono functionalities of C++11.
+We used the new thread and chrono functionalities of C++11.
 
 ## Pangolin
 We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
@@ -298,6 +298,11 @@ EuRoC provides ground truth for each sequence in the IMU body reference. As pure
 Execute the following script to process sequences and compute the RMS ATE:
 ```
 ./euroc_eval_examples
+```
+
+### Running Monocular+Inertial example
+```
+./Examples/Monocular-Inertial/mono_inertial_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular-Inertial/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Monocular-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_monoi
 ```
 
 # 5. TUM-VI Examples
