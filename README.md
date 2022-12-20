@@ -301,6 +301,7 @@ Execute the following script to process sequences and compute the RMS ATE:
 ```
 
 ### Running Monocular+Inertial example
+From path to directory, run:
 ```
 ./Examples/Monocular-Inertial/mono_inertial_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular-Inertial/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Monocular-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_monoi
 ```
