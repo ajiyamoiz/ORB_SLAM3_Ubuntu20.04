@@ -240,6 +240,7 @@ We have tested the library in **Ubuntu 16.04** and **18.04**, but it should be e
 
 ## C++11 or C++0x Compiler
 We used the new thread and chrono functionalities of C++11.
+**Tested with C++14
 
 ## Pangolin
 We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
