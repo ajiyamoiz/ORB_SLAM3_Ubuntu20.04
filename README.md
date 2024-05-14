@@ -1,7 +1,7 @@
 # Installation
 Tested on 10 December 2022
 
-I got some useful information from these websites before create this project. Thanks to the authors! 
+I got some useful information from these websites for this project. Thanks to the authors! 
 
 Master [UZ-SLAMLab/ORB_SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
