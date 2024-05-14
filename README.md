@@ -302,7 +302,7 @@ cd ~/Dev/ORB_SLAM3
 ./Examples/Stereo-Inertial/stereo_inertial_euroc ./Vocabulary/ORBvoc.txt ./Examples/Stereo-Inertial/EuRoC.yaml ~/Datasets/EuRoc/MH01 ./Examples/Stereo-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_stereoi
 ```
 
-# 4 Validation Estimate vs Ground True
+# 4. Validation Estimate vs Ground True
 We need numpy and matplotlib installed in pytho2.7. But Ubuntu20.04 has not pip2.7
 ```shell
 sudo apt install curl
@@ -328,10 +328,10 @@ python evaluation/evaluate_ate_scale.py evaluation/Ground_truth/EuRoC_left_cam/M
 
 open the pdf `MH01_stereo.pdf` and you see the 
 
-# 5 Some comments
+# 5. Some comments
 1. You should download more datasets from EuRoc to see more 
 
-2. The support of inertial measurement unit (IMU) has incredibally increse the accuracy although it is alreday very accurate without IMU.
+2. The support of the inertial measurement unit (IMU) has incredibly increased the accuracy although it is already very accurate without IMU.
 
 # The rest is the original information
 
@@ -387,17 +387,17 @@ If you use ORB-SLAM3 in an academic work, please cite:
      }
 
 # 2. Prerequisites
-We have tested the library in **Ubuntu 16.04** and **18.04**, but it should be easy to compile in other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
+We have tested the library in **Ubuntu 16.04** and **18.04**, but it should be easy to compile on other platforms. A powerful computer (e.g. i7) will ensure real-time performance and provide more stable and accurate results.
 
 ## C++11 or C++0x Compiler
 We used the new thread and chrono functionalities of C++11.
 **Tested with C++14
 
 ## Pangolin
-We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
+We use [Pangolin](https://github.com/stevenlovegrove/Pangolin) for visualization and user interface. Download and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
 
 ## OpenCV
-We use [OpenCV](http://opencv.org) to manipulate images and features. Dowload and install instructions can be found at: http://opencv.org. **Required at least 4.4. Tested with OpenCV 4.5.1**.
+We use [OpenCV](http://opencv.org) to manipulate images and features. Download and install instructions can be found at: http://opencv.org. **Required at least 4.4. Tested with OpenCV 4.5.1**.
 
 ## Eigen3
 Required by g2o (see below). Download and install instructions can be found at: http://eigen.tuxfamily.org. **Required at least 3.1.0**.
@@ -414,7 +414,7 @@ Required to calculate the alignment of the trajectory with the ground truth. **R
 
 ## ROS (optional)
 
-We provide some examples to process input of a monocular, monocular-inertial, stereo, stereo-inertial or RGB-D camera using ROS. Building these examples is optional. These have been tested with ROS Melodic under Ubuntu 18.04.
+We provide some examples to process the input of a monocular, monocular-inertial, stereo, stereo-inertial or RGB-D camera using ROS. Building these examples is optional. These have been tested with ROS Melodic under Ubuntu 18.04.
 
 # 3. Building ORB-SLAM3 library and examples
 
@@ -430,14 +430,14 @@ chmod +x build.sh
 ./build.sh
 ```
 
-This will create **libORB_SLAM3.so**  at *lib* folder and the executables in *Examples* folder.
+This will create **libORB_SLAM3.so**  in the *lib* folder and the executables in the *Examples* folder.
 
 # 4. EuRoC Examples
 [EuRoC dataset](http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets) was recorded with two pinhole cameras and an inertial sensor. We provide an example script to launch EuRoC sequences in all the sensor configurations.
 
 1. Download a sequence (ASL format) from http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets
 
-2. Open the script "euroc_examples.sh" in the root of the project. Change **pathDatasetEuroc** variable to point to the directory where the dataset has been uncompressed. 
+2. Open the script "euroc_examples.sh" in the root of the project. Change the **pathDatasetEuroc** variable to point to the directory where the dataset has been uncompressed. 
 
 3. Execute the following script to process all the sequences with all sensor configurations:
 ```
@@ -463,7 +463,7 @@ From path to directory, run:
 
 1. Download a sequence from https://vision.in.tum.de/data/datasets/visual-inertial-dataset and uncompress it.
 
-2. Open the script "tum_vi_examples.sh" in the root of the project. Change **pathDatasetTUM_VI** variable to point to the directory where the dataset has been uncompressed. 
+2. Open the script "tum_vi_examples.sh" in the root of the project. Change the **pathDatasetTUM_VI** variable to point to the directory where the dataset has been uncompressed. 
 
 3. Execute the following script to process all the sequences with all sensor configurations:
 ```
@@ -471,7 +471,7 @@ From path to directory, run:
 ```
 
 ## Evaluation
-In TUM-VI ground truth is only available in the room where all sequences start and end. As a result the error measures the drift at the end of the sequence. 
+In TUM-VI ground truth is only available in the room where all sequences start and end. As a result, the error measures the drift at the end of the sequence. 
 
 Execute the following script to process sequences and compute the RMS ATE:
 ```
@@ -481,13 +481,13 @@ Execute the following script to process sequences and compute the RMS ATE:
 # 6. ROS Examples
 
 ### Building the nodes for mono, mono-inertial, stereo, stereo-inertial and RGB-D
-Tested with ROS Melodic and ubuntu 18.04.
+Tested with ROS Melodic and Ubuntu 18.04.
 
 1. Add the path including *Examples/ROS/ORB_SLAM3* to the ROS_PACKAGE_PATH environment variable. Open .bashrc file:
   ```
   gedit ~/.bashrc
   ```
-and add at the end the following line. Replace PATH by the folder where you cloned ORB_SLAM3:
+and add at the end the following line. Replace PATH with the folder where you cloned ORB_SLAM3:
 
   ```
   export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:PATH/ORB_SLAM3/Examples/ROS
@@ -515,14 +515,14 @@ For a monocular input from topic `/camera/image_raw` and an inertial input from 
   ```
 
 ### Running Stereo Node
-For a stereo input from topic `/camera/left/image_raw` and `/camera/right/image_raw` run node ORB_SLAM3/Stereo. You will need to provide the vocabulary file and a settings file. For Pinhole camera model, if you **provide rectification matrices** (see Examples/Stereo/EuRoC.yaml example), the node will recitify the images online, **otherwise images must be pre-rectified**. For FishEye camera model, rectification is not required since system works with original images:
+For a stereo input from topic `/camera/left/image_raw` and `/camera/right/image_raw` run node ORB_SLAM3/Stereo. You will need to provide the vocabulary file and a settings file. For Pinhole camera model, if you **provide rectification matrices** (see Examples/Stereo/EuRoC.yaml example), the node will rectify the images online, **otherwise images must be pre-rectified**. For FishEye camera model, rectification is not required since system works with original images:
 
   ```
   rosrun ORB_SLAM3 Stereo PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE ONLINE_RECTIFICATION
   ```
 
 ### Running Stereo-Inertial Node
-For a stereo input from topics `/camera/left/image_raw` and `/camera/right/image_raw`, and an inertial input from topic `/imu`, run node ORB_SLAM3/Stereo_Inertial. You will need to provide the vocabulary file and a settings file, including rectification matrices if required in a similar way to Stereo case:
+For a stereo input from topics `/camera/left/image_raw` and `/camera/right/image_raw`, and an inertial input from topic `/imu`, run node ORB_SLAM3/Stereo_Inertial. You will need to provide the vocabulary file and a settings file, including rectification matrices if required in a similar way to the Stereo case:
 
   ```
   rosrun ORB_SLAM3 Stereo_Inertial PATH_TO_VOCABULARY PATH_TO_SETTINGS_FILE ONLINE_RECTIFICATION [EQUALIZATION]	
@@ -550,7 +550,7 @@ For an RGB-D input from topics `/camera/rgb/image_raw` and `/camera/depth_regist
   
 Once ORB-SLAM3 has loaded the vocabulary, press space in the rosbag tab.
 
-**Remark:** For rosbags from TUM-VI dataset, some play issue may appear due to chunk size. One possible solution is to rebag them with the default chunk size, for example:
+**Remark:** For rosbags from TUM-VI dataset, some play issues may appear due to chunk size. One possible solution is to rebag them with the default chunk size, for example:
   ```
   rosrun rosbag fastrebag.py dataset-room1_512_16.bag dataset-room1_512_16_small_chunks.bag
   ```
